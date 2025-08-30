@@ -5,16 +5,16 @@
       Fan Trick Fine Art Photography
       Variables and functions
       Author: Aisha Keller
-      Date:   08/21/2025
+      Date: 08/30/2025
 
       Filename: js02.js
  */
 
 // declare global constants for the application
-const EMP_COST = 100;    //cost of photographers per hour
-const BOOK_COST = 350;   //cost of memory book
-const REPRO_COST = 1250; //cost of reproduction rights
-const TRAVEL_COST = 2;   //cost of travel per mile
+const EMP_COST = 100;  //cost of photographers per hour
+const BOOK_COST = 350; //cost of memory book
+const REPRO_COST = 1250; // cost of reproduction rights
+const TRAVEL_COST = 2; //cost of travel per mile
 
 // setup the form when the page loads
 window.addEventListener("load", setupForm);
@@ -31,12 +31,12 @@ function setupForm() {
 
   getEstimate();
 
-  // Add even handlers for each input control
-  document.getElementById("photoNum").onchange = getEstimate;
-  document.getElementById("photoHrs").onchange = getEstimate;
-  document.getElementById("photoDist").onchange = getEstimate;
-  document.getElementById("makeBook").onchange = getEstimate;
-  document.getElementById("photoRights").onchange = getEstimate;
+// Add event handlers for each input control
+document.getElementById("photoNum").onchange = getEstimate;
+document.getElementById("photoHrs").onchange = getEstimate;
+document.getElementById("photoDist").onchange = getEstimate;
+document.getElementById("makeBook").onchange = getEstimate;
+document.getElementById("photoRights").onchange = getEstimate;
 }
 
 // estimate the total cost of the service
@@ -60,7 +60,7 @@ function getEstimate() {
   // Add the cost of photo rights if purchased
   totalCost += buyRights ? REPRO_COST : 0;
 
-  // Display the total cost estimate
+  // Display the estimate value formatted as currency
   document.getElementById("estimate").innerHTML = "$" + totalCost;
 }
 
