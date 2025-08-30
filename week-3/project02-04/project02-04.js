@@ -31,9 +31,9 @@ document.getElementById("salad").addEventListener("click", calcTotal);
 
 // setup the form's default values
 function calcTotal() {
-  let totalCost = 0;
+  let cost = 0;
   const buyChicken = document.getElementById("chicken").checked;
-  const buyHalibut= document.getElementById("halibut").checked;
+  const buyHalibut = document.getElementById("halibut").checked;
   const buyBurger = document.getElementById("burger").checked;
   const buySalmon = document.getElementById("salmon").checked;
   const buySalad = document.getElementById("salad").checked;
@@ -61,7 +61,7 @@ const tax = cost * SALES_TAX;
 document.getElementById("foodTax").innerHTML = formatCurrency(tax);
 
 //Declare total cost variable
-const total = cost + tax;
+const totalCost = cost + tax;
 document.getElementById("totalBill").innerHTML = formatCurrency(totalCost);
 }
 
